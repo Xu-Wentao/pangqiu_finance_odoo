@@ -1,0 +1,56 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="orders_update_tree">
+            <field name="name">胖球分享订单更新</field>
+            <field name="model">yc.orders_update</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="order_no"/>
+                    <field name="channel"/>
+                    <field name="channel_no"/>
+                    <field name="price"/>
+                    <field name="logistics_company"/>
+                    <field name="logistics_no"/>
+                    <field name="finance_remark"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="orders_update_form">
+            <field name="name">胖球分享订单更新</field>
+            <field name="model">yc.orders_update</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="order_no"/>
+                            <field name="channel"/>
+                            <field name="channel_no"/>
+                            <field name="price"/>
+                            <field name="logistics_company"/>
+                            <field name="logistics_no"/>
+                            <field name="finance_remark"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="orders_update_action">
+            <field name="name">胖球分享订单更新</field>
+            <field name="res_model">yc.orders_update</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_update_orders" model="ir.actions.server">
+            <field name="name">胖球分享订单更新</field>
+            <field name="model_id" ref="model_yc_orders_update"/>
+            <field name="binding_model_id" ref="model_yc_orders_update"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = records.update_orders()
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,35 @@
+<odoo>
+  <data>
+    <menuitem name="叶超的订单" id="orders_menu_root" sequence="0"/>
+
+    <menuitem name="胖球分享订单" id="orders_menu_orders" sequence="0"
+                  parent="orders_menu_root"/>
+
+    <menuitem name="胖球分享订单" id="orders_menu_orders_list" sequence="0"
+                  parent="orders_menu_orders"
+                  action="orders_action"/>
+
+    <menuitem name="胖球分享支付宝订单" id="orders_alipay_menu_orders_list" sequence="3"
+              parent="orders_menu_orders"
+              action="orders_alipay_action"/>
+
+    <menuitem name="胖球分享订单更新" id="orders_menu_orders_update" sequence="1"
+              parent="orders_menu_orders"
+              action="orders_update_action"/>
+
+    <menuitem name="胖球商城订单" id="qmall_orders_menu_orders" sequence="1"
+                  parent="orders_menu_root"/>
+
+    <menuitem name="胖球商城订单" id="qmall_orders_menu_orders_list" sequence="0"
+              parent="qmall_orders_menu_orders"
+              action="qmall_orders_action"/>
+
+     <menuitem name="胖球商城支付宝订单" id="qmall_orders_alipay_menu_orders_list" sequence="3"
+              parent="qmall_orders_menu_orders"
+              action="qmall_orders_alipay_action"/>
+
+    <menuitem name="胖球商城订单更新" id="qmall_orders_menu_orders_update" sequence="1"
+              parent="qmall_orders_menu_orders"
+              action="qmall_orders_update_action"/>
+  </data>
+</odoo>

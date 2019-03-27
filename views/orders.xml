@@ -1,0 +1,67 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="orders_tree">
+            <field name="name">订单</field>
+            <field name="model">yc.orders</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="order_no"/>
+                    <field name="channel"/>
+                    <field name="channel_no"/>
+                    <field name="price"/>
+                    <field name="order_person"/>
+                    <field name="logistics_no"/>
+                    <field name="remark"/>
+                    <field name="finance_remark"/>
+                    <field name="checked"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="orders_form">
+            <field name="name">订单</field>
+            <field name="model">yc.orders</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="goods_no"/>
+                            <field name="order_no"/>
+                            <field name="buyer_nick_name"/>
+                            <field name="seller_open_id"/>
+                            <field name="receiver_name"/>
+                            <field name="receiver_phone"/>
+                            <field name="receiver_address"/>
+                            <field name="goods_name"/>
+                            <field name="goods_desc"/>
+                            <field name="ball_num"/>
+                            <field name="logistics_type"/>
+                            <field name="logistics_cost"/>
+                            <field name="logistics_payed"/>
+                            <field name="logistics_status"/>
+                            <field name="create_time"/>
+                            <field name="order_type"/>
+                            <field name="sent"/>
+                            <field name="order_person"/>
+                            <field name="channel"/>
+                            <field name="channel_no"/>
+                            <field name="price"/>
+                            <field name="logistics_company"/>
+                            <field name="logistics_no"/>
+                            <field name="remark"/>
+                            <field name="finance_remark"/>
+                            <field name="checked"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="orders_action">
+            <field name="name">订单</field>
+            <field name="res_model">yc.orders</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

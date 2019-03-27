@@ -1,0 +1,54 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="qmall_orders_update_tree">
+            <field name="name">胖球商城订单更新</field>
+            <field name="model">qmall.orders_update</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="order_no"/>
+                    <field name="channel"/>
+                    <field name="channel_no"/>
+                    <field name="channel_price"/>
+                    <field name="logistics_company"/>
+                    <field name="logistics_no"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="orders_update_form">
+            <field name="name">胖球商城订单更新</field>
+            <field name="model">qmall.orders_update</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="order_no"/>
+                            <field name="channel"/>
+                            <field name="channel_no"/>
+                            <field name="channel_price"/>
+                            <field name="logistics_company"/>
+                            <field name="logistics_no"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="qmall_orders_update_action">
+            <field name="name">胖球商城订单更新</field>
+            <field name="res_model">qmall.orders_update</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="qmall_action_update_orders" model="ir.actions.server">
+            <field name="name">胖球商城订单更新</field>
+            <field name="model_id" ref="model_qmall_orders_update"/>
+            <field name="binding_model_id" ref="model_qmall_orders_update"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = records.update_orders()
+            </field>
+        </record>
+
+    </data>
+</odoo>

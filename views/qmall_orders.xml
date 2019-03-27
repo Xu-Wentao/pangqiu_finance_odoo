@@ -1,0 +1,92 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="orders_tree">
+            <field name="name">订单</field>
+            <field name="model">qmall.orders</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="vendor_name"/>
+                    <field name="order_no"/>
+                    <field name="pay_no"/>
+                    <field name="order_created_at"/>
+                    <field name="user"/>
+                    <field name="user_phone"/>
+                    <field name="province"/>
+                    <field name="city"/>
+                    <field name="district"/>
+                    <field name="address_detail"/>
+                    <field name="goods_name"/>
+                    <field name="goods_attributes"/>
+                    <field name="goods_num"/>
+                    <field name="cost_price"/>
+                    <field name="goods_price"/>
+                    <field name="pay_price"/>
+                    <field name="logistics_price"/>
+                    <field name="logistics_company"/>
+                    <field name="logistics_no"/>
+                    <field name="order_status"/>
+                    <field name="channel"/>
+                    <field name="channel_no"/>
+                    <field name="channel_price"/>
+                    <field name="order_finished_at"/>
+                    <field name="points_rate"/>
+                    <field name="points_price"/>
+                    <field name="refund_price"/>
+                    <field name="logistcs_upload"/>
+                    <field name="refund"/>
+                    <field name="datetime"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="orders_form">
+            <field name="name">订单</field>
+            <field name="model">qmall.orders</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="vendor_name"/>
+                            <field name="order_no"/>
+                            <field name="pay_no"/>
+                            <field name="order_created_at"/>
+                            <field name="user"/>
+                            <field name="user_phone"/>
+                            <field name="province"/>
+                            <field name="city"/>
+                            <field name="district"/>
+                            <field name="address_detail"/>
+                            <field name="goods_name"/>
+                            <field name="goods_attributes"/>
+                            <field name="goods_num"/>
+                            <field name="cost_price"/>
+                            <field name="goods_price"/>
+                            <field name="pay_price"/>
+                            <field name="logistics_price"/>
+                            <field name="logistics_company"/>
+                            <field name="logistics_no"/>
+                            <field name="order_status"/>
+                            <field name="channel"/>
+                            <field name="channel_no"/>
+                            <field name="channel_price"/>
+                            <field name="order_finished_at"/>
+                            <field name="points_rate"/>
+                            <field name="points_price"/>
+                            <field name="refund_price"/>
+                            <field name="logistcs_upload"/>
+                            <field name="refund"/>
+                            <field name="datetime"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="qmall_orders_action">
+            <field name="name">订单</field>
+            <field name="res_model">qmall.orders</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>
