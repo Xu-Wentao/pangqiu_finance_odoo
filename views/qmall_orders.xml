@@ -1,6 +1,6 @@
 <odoo>
     <data>
-        <record model="ir.ui.view" id="orders_tree">
+        <record model="ir.ui.view" id="qmall_orders_tree">
             <field name="name">订单</field>
             <field name="model">qmall.orders</field>
             <field name="arch" type="xml">
@@ -39,7 +39,7 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="orders_form">
+        <record model="ir.ui.view" id="qmall_orders_form">
             <field name="name">订单</field>
             <field name="model">qmall.orders</field>
             <field name="arch" type="xml">
