@@ -37,7 +37,7 @@ class QMallOrders(models.Model):
     logistcs_upload = fields.Char('物流上传')
     refund = fields.Char('退款')
     datetime = fields.Char('日期')
-    alipay_id = fields.Many2one('yc.orders_alipay', string='支付宝订单')
+    alipay_id = fields.Many2one('qmall.orders_alipay', string='支付宝订单')
 
 
 
