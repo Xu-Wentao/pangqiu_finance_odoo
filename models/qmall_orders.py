@@ -104,17 +104,15 @@ class QMallOrdersAlipay(models.Model):
         for record in self:
             orders = self.env['qmall.orders'].search(
                 [('channel_no', '=', int(record.channel_no))])
-            order_ids = []
             order_price_sum = Decimal()
             if orders:
                 for order in orders:
-                    order_ids.append(order.id)
                     try:
-                        order_price_sum += Decimal(order.price)
+                        order_price_sum += Decimal(order.channel_price)
                         order.checked = True
                     except:
                         pass
-                record.order_ids = [(6, 0, order_ids)]
+                record.order_ids = [(6, 0, orders.ids)]
                 record_price = Decimal()
                 try:
                     record_price = Decimal(record.price)
