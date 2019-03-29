@@ -103,7 +103,7 @@ class QMallOrdersAlipay(models.Model):
     def check(self):
         for record in self:
             orders = self.env['qmall.orders'].search(
-                [('channel_no', '=', int(record.channel_no))])
+                [('channel_no', '=', record.channel_no)])
             order_price_sum = Decimal()
             if orders:
                 for order in orders:
