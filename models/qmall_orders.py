@@ -86,7 +86,7 @@ class QMallOrdersAlipay(models.Model):
     channel_no = fields.Char('渠道订单号')
     price = fields.Char('金额')
     time = fields.Date('日期')
-    order_ids = fields.One2many('yc.orders', 'alipay_id', '订单')
+    order_ids = fields.One2many('qmall.orders', 'alipay_id', '订单')
     checked = fields.Boolean(default=False, string='已比对')
     diff = fields.Selection([('0', '相同'), ('1', '错误')], string='核对结果')
     order_price_sum = fields.Char('订单合计金额')
@@ -101,7 +101,7 @@ class QMallOrdersAlipay(models.Model):
     @api.multi
     def check(self):
         for record in self:
-            orders = self.env['yc.orders'].search(
+            orders = self.env['qmall.orders'].search(
                 [('channel_no', '=', int(record.channel_no))])
             order_ids = []
             order_price_sum = Decimal()
