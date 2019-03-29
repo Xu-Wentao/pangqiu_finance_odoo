@@ -57,7 +57,7 @@ class QMallOrdersUpdate(models.Model):
             vals['channel_no'] = vals['channel_no'].replace(' ', '')
         if vals.get('order_no', False):
             vals['order_no'] = vals['order_no'].replace(' ', '')
-        return super(YeChaoOrdersUpdate, self).create(vals)
+        return super(QMallOrdersUpdate, self).create(vals)
 
     @api.multi
     def update_orders(self):
@@ -97,7 +97,7 @@ class QMallOrdersAlipay(models.Model):
     def create(self, vals):
         if vals.get('channel_no', False):
             vals['channel_no'] = vals['channel_no'].replace(' ', '')
-        return super(YechaoOrdersAlipay, self).create(vals)
+        return super(QMallOrdersAlipay, self).create(vals)
 
     @api.multi
     def check(self):
